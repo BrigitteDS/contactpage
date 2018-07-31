@@ -56,10 +56,10 @@
         <div class="row d-flex align-items-start flex-column section-container">
             <div class="sections">
                 <div style="height: 50px; margin-bottom: 5px;">
-                    <a href='https://wa.me/27606716982'target='_blank'><div class="whatsapp"><img class="icons" src="https://cms1.betwayafrica.com/medialibraries/content.gmgamingsystems.com/New-Media/BetwayZA/Other/WA.png" alt=""></div></a>
+                    <a href='https://wa.me/27606716982?text=test'target='_blank'><div class="whatsapp"><img class="icons" src="https://cms1.betwayafrica.com/medialibraries/content.gmgamingsystems.com/New-Media/BetwayZA/Other/WA.png" alt=""></div></a>
                 </div>
                 <div class="section-blocks">
-                    <a href='https://wa.me/27606716982'target='_blank'><p style="padding:15px;">WhatsApp: <span class="bolded-text">+27 60 671 6982</span></p></a>
+                    <a href='https://wa.me/27606716982?text=test'target='_blank'><p style="padding:15px;">WhatsApp: <span class="bolded-text">+27 60 671 6982</span></p></a>
                 </div>
             </div>
             <div class="sections">
@@ -85,51 +85,76 @@
         <span class="header-copy">Contact form</span>
     </div>
 
-    <div class="row d-flex">
-        <div class="col-sm-4">
-                <form>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1"><strong>Dialing Code*</strong></label>
-                        <select id="inputState" class="form-control">
-                            <option selected>Choose...</option>
-                            <option>...</option>
-                        </select>
-                    </div>
-                </form>
-                <form>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1"><strong>Mobile Number*</strong></label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter number">
-                    </div>
-                </form>
-                <form>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1"><strong>Email Address*</strong></label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                        <small id="emailHelp" class="form-text text-muted"><i>* these are required fields</i></small>
-                    </div>
-                </form>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 contactFormDiv">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <!-- Dialing Code -->
+            <div class="form-group form-group-sm">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <label class="label-required" for="DialingCode">Dialing Code</label><span class="required" aria-required="true">*</span>
+                    <select class="form-control" data-val="true" data-val-required="Please select a dialing code" id="DialingCode" name="DialingCode"><option value="+27">+27 - South Africa</option></select>
+                    <span class="field-validation-valid error-message" data-valmsg-for="DialingCode" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+            <!-- Mobile Number -->
+            <div class="form-group form-group-sm">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <label class="label-required" for="MobileNumber">Mobile Number</label><span class="required" aria-required="true">*</span>
+                    <input class="form-control text-box single-line" data-val="true" data-val-length="Invalid mobile number" data-val-length-max="10" data-val-length-min="9" data-val-required="Enter your mobile number" id="MobileNumber" name="MobileNumber" type="tel" value="">
+                    <span class="field-validation-valid error-message" data-valmsg-for="MobileNumber" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+            <!-- E-mail -->
+            <div class="form-group form-group-sm">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <label class="label-required" for="EmailAddress">Email Address</label><span class="required" aria-required="true">*</span>
+                    <input class="form-control text-box single-line" data-val="true" data-val-regex="The email address is invalid" data-val-regex-pattern="^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$" data-val-required="Enter your email address" id="EmailAddress" name="EmailAddress" type="text" value="">
+                    <span class="field-validation-valid error-message" data-valmsg-for="EmailAddress" data-valmsg-replace="true"></span>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <p style="font-style:italic">* these are required fields</p>
+                </div>
+            </div>
         </div>
-
-
-        <div class="col-sm-8">
-            <form>
-                <div class="form-group">
-                    <label for="exampleInputEmail1"><strong>Query Type*</strong></label>
-                    <select id="inputState" class="form-control">
-                        <option selected>Choose...</option>
-                        <option>...</option>
+        <div class="col-xs-12 hidden-sm col-md-1 col-lg-1"></div>
+        <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7">
+        <!-- Query Type -->
+            <div class="form-group form-group-sm">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <label class="label-required" for="QueryType">Query Type</label><span class="required" aria-required="true">*</span>
+                    <select class="form-control" data-val="true" data-val-required="Please select a query type" id="QueryType" name="QueryType"><option>Betslip Query</option>
+                        <option>Voided Bet Query</option>
+                        <option>Odds</option>
+                        <option>Deposit Query</option>
+                        <option>Withdraw Query</option>
+                        <option>Password Query</option>
+                        <option>Promotion more Info</option>
+                        <option>Account Query</option>
+                        <option>General info</option>
                     </select>
+                    <span class="field-validation-valid error-message" data-valmsg-for="QueryType" data-valmsg-replace="true"></span>
                 </div>
-                <div class="form-group">
-                    <label for="exampleFormControlTextarea1"><strong>Query*</strong></label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <!-- Query -->
+            <div class="form-group form-group-sm">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <label class="label-required" for="Query">Query</label><span class="required" aria-required="true">*</span>
+                    <textarea class="form-control" cols="20" data-val="true" data-val-length="Your query should contain between 10-5000 characters" data-val-length-max="5000" data-val-length-min="10" data-val-required="Please enter your query" id="Query" name="Query" rows="3"></textarea>
+                    <span class="field-validation-valid error-message" data-valmsg-for="Query" data-valmsg-replace="true"></span>
                 </div>
-                <button type="submit" class="btn btn-primary" style="float:right; width: 20%;">Submit</button>
-            </form>
+            </div>
+            <!-- Captcha -->
+            <div id="captcha" class="col-xs-12 col-sm-12 col-md-8 col-lg-8" style="margin-top:5px">
+                <div class="g-recaptcha" data-sitekey="6LcKHxcUAAAAAP4VvHnBbncnM0I6UdC1GQC5ectk"><div style="width: 304px; height: 78px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LcKHxcUAAAAAP4VvHnBbncnM0I6UdC1GQC5ectk&amp;co=aHR0cHM6Ly93d3cuYmV0d2F5LmNvLnphOjQ0Mw..&amp;hl=en&amp;v=v1531759913576&amp;size=normal&amp;cb=kgd5aiu1cbfs" width="304" height="78" role="presentation" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;  display: none; "></textarea></div></div>
+            </div>
+            <!-- Submit button -->
+            <div class="form-group">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 cnt-submit">
+                    <span class="contactFormSpacing"><br><br></span>
+                    <button type="submit" class="btn btn-border" onclick="showOverlay()">Submit</button>
+                </div>
+            </div>
         </div>
     </div>
-
 </div>
   
 <style>
@@ -252,43 +277,3 @@
     })();
 </script>
 <!-- /WhatsHelp.io widget -->
-
-
-<!-- <div class="rc-anchor rc-anchor-normal rc-anchor-light">
-        <div id="recaptcha-accessible-status" class="rc-anchor-aria-status" aria-hidden="true">Recaptcha requires verification. </div>
-        <div class="rc-anchor-error-msg-container" style="display:none"><span class="rc-anchor-error-msg" aria-hidden="true"></span></div>
-        <div class="rc-anchor-content">
-            <div class="rc-inline-block">
-                <div class="rc-anchor-center-container">
-                    <div class="rc-anchor-center-item rc-anchor-checkbox-holder">
-                        <span class="recaptcha-checkbox goog-inline-block recaptcha-checkbox-unchecked rc-anchor-checkbox recaptcha-checkbox-hover recaptcha-checkbox-clearOutline" role="checkbox" aria-checked="false" id="recaptcha-anchor" tabindex="0" dir="ltr" aria-labelledby="recaptcha-anchor-label">
-                            <div class="recaptcha-checkbox-border" role="presentation"></div>
-                            <div class="recaptcha-checkbox-borderAnimation" role="presentation"></div>
-                            <div class="recaptcha-checkbox-spinner" role="presentation"></div>
-                            <div class="recaptcha-checkbox-spinnerAnimation" role="presentation"></div>
-                            <div class="recaptcha-checkbox-checkmark" role="presentation"></div>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="rc-inline-block">
-                <div class="rc-anchor-center-container">
-                    <label class="rc-anchor-center-item rc-anchor-checkbox-label" aria-hidden="true" role="presentation" id="recaptcha-anchor-label">
-                        <span aria-live="polite" aria-labelledby="recaptcha-accessible-status"></span>
-                        I'm not a robot
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="rc-anchor-normal-footer">
-            <div class="rc-anchor-logo-portrait" aria-hidden="true" role="presentation">
-                <div class="rc-anchor-logo-img rc-anchor-logo-img-portrait"></div>
-                <div class="rc-anchor-logo-text">reCAPTCHA</div>
-            </div>
-            <div class="rc-anchor-pt">
-                <a href="https://www.google.com/intl/en/policies/privacy/" target="_blank">Privacy</a>
-                <span aria-hidden="true" role="presentation"> - </span>
-                <a href="https://www.google.com/intl/en/policies/terms/" target="_blank">Terms</a>
-            </div>
-        </div>
-    </div> -->
